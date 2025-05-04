@@ -1,0 +1,101 @@
+.hero-0-0-1 {
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #1a2a44;
+}
+.hero-0-0-1 h1 {
+  font-size: 40px;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+.hero-0-0-1 p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.cta-0-0-2 {
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #d4a017;
+}
+.cta-0-0-2:hover {
+  background-color: #b88b14;
+}
+.about-0-0-3 {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.about-0-0-3 h2 {
+  font-size: 30px;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+.about-0-0-3 p {
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+}
+.contact-0-0-4 {
+  padding: 50px 20px;
+  text-align: center;
+}
+.contact-0-0-4 h2 {
+  font-size: 30px;
+  font-family: Georgia, serif;
+  margin-bottom: 15px;
+}
+.contact-0-0-4 form {
+  gap: 10px;
+  margin: 0 auto;
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+}
+.contact-0-0-4 input, .contact-0-0-4 textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.contact-0-0-4 button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #1a2a44;
+}
+.contact-0-0-4 p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.contact-0-0-4 button:hover {
+  background-color: #15233b;
+}
+@media (max-width: 768px) {
+  .hero-0-0-1 {
+    padding: 50px 20px;
+  }
+  .hero-0-0-1 h1 {
+    font-size: 32px;
+  }
+  .hero-0-0-1 p {
+    font-size: 18px;
+  }
+  .about-0-0-3 h2 {
+    font-size: 24px;
+  }
+  .about-0-0-3 p {
+    font-size: 14px;
+  }
+  .contact-0-0-4 h2 {
+    font-size: 24px;
+  }
+}
