@@ -20,21 +20,22 @@ body.dark {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(26, 42, 68, 0.8);
-  padding: 15px 20px;
+  background-color: rgba(26, 42, 68, 0.9);
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .navbar.scrolled {
   background-color: #1A2A44;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 28px;
   color: #D4A017;
   font-family: 'Georgia', serif;
 }
@@ -42,7 +43,7 @@ body.dark {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-link {
@@ -50,9 +51,11 @@ body.dark {
   text-decoration: none;
   font-family: 'Arial', sans-serif;
   font-size: 16px;
+  transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: #D4A017;
 }
 
@@ -60,15 +63,20 @@ body.dark {
   background: none;
   border: none;
   color: #FFFFFF;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: rotate(360deg);
 }
 
 .hero {
   background-color: #1A2A44;
   color: #FFFFFF;
   text-align: center;
-  padding: 120px 20px;
+  padding: 140px 30px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -78,64 +86,67 @@ body.dark {
 }
 
 .hero-content {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 1.2s ease-in;
 }
 
 .hero h1 {
-  font-size: 56px;
-  margin-bottom: 20px;
+  font-size: 60px;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'Arial', sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .cta {
   background-color: #D4A017;
   color: #FFFFFF;
-  padding: 14px 30px;
+  padding: 16px 35px;
   font-size: 18px;
   font-family: 'Arial', sans-serif;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .cta:hover {
   background-color: #B88B14;
+  transform: scale(1.05);
 }
 
 .wallet-btn {
   background-color: #333333;
   color: #FFFFFF;
   border: 1px solid #D4A017;
-  padding: 14px 30px;
+  padding: 16px 35px;
   font-size: 18px;
   font-family: 'Arial', sans-serif;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .wallet-btn:hover {
   background-color: #1A2A44;
+  transform: scale(1.05);
 }
 
 .about {
   background-color: #FFFFFF;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 30px;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(60px);
+  transition: opacity 0.6s, transform 0.6s;
 }
 
 .about.visible {
@@ -144,25 +155,25 @@ body.dark {
 }
 
 .about h2 {
-  font-size: 36px;
+  font-size: 40px;
   color: #1A2A44;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .about p {
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Arial', sans-serif;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .contact {
   background-color: #F9F9F9;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 30px;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(60px);
+  transition: opacity 0.6s, transform 0.6s;
 }
 
 .contact.visible {
@@ -171,16 +182,16 @@ body.dark {
 }
 
 .contact h2 {
-  font-size: 36px;
+  font-size: 40px;
   color: #1A2A44;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
+  gap: 20px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -191,80 +202,87 @@ body.dark {
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
   border: 1px solid #333333;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #FFFFFF;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .contact input:focus,
 .contact textarea:focus {
   border-color: #D4A017;
+  box-shadow: 0 0 8px rgba(212, 160, 23, 0.2);
   outline: none;
 }
 
 .contact textarea {
-  height: 150px;
+  height: 160px;
   resize: vertical;
 }
 
 .contact button {
   background-color: #1A2A44;
   color: #FFFFFF;
-  padding: 14px;
+  padding: 16px;
   font-size: 18px;
   font-family: 'Arial', sans-serif;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .contact button:hover {
   background-color: #D4A017;
+  transform: scale(1.05);
 }
 
 .error-message {
   color: #B88B14;
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Arial', sans-serif;
   position: absolute;
-  bottom: -20px;
+  bottom: -25px;
   left: 0;
+  transition: opacity 0.3s;
 }
 
 .contact p {
   font-size: 16px;
   font-family: 'Arial', sans-serif;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .contact a {
   color: #D4A017;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .contact a:hover {
-  text-decoration: underline;
+  color: #B88B14;
 }
 
 .toast {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   background-color: #333333;
   color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 6px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 3000;
 }
 
 .toast.show {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .modal {
@@ -274,45 +292,52 @@ body.dark {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 2000;
 }
 
 .modal-content {
   background-color: #FFFFFF;
-  margin: 15% auto;
-  padding: 20px;
+  margin: 10% auto;
+  padding: 30px;
   width: 90%;
-  max-width: 400px;
-  border-radius: 5px;
+  max-width: 450px;
+  border-radius: 8px;
   text-align: center;
+  animation: slideIn 0.3s ease-out;
 }
 
 .modal-close {
   float: right;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
+  color: #333333;
+}
+
+.modal-close:hover {
+  color: #D4A017;
 }
 
 .modal h3 {
-  font-size: 24px;
+  font-size: 26px;
   color: #1A2A44;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .modal p {
   font-size: 16px;
   font-family: 'Arial', sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .modal button {
   background-color: #D4A017;
   color: #FFFFFF;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .modal button:hover {
@@ -324,37 +349,47 @@ body.dark {
   to { opacity: 1; }
 }
 
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .hero-buttons {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
 
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    padding: 10px 20px;
+    gap: 15px;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .about h2,
   .contact h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
-  .about p,
-  .contact p {
-    font-size: 16px;
+  .about p {
+    font-size: 18px;
+  }
+
+  .contact input,
+  .contact textarea {
+    padding: 12px;
   }
 }
