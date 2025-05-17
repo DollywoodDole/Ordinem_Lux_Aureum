@@ -1,4 +1,4 @@
-k<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,24 +8,60 @@ k<!DOCTYPE html>
 </head>
 <body>
   <header class="hero">
-    <h1>Ordinem Lux Aureum</h1>
-    <p>Uniting visionaries to shape culture.</p>
-    <a href="#contact" class="cta">Join Us</a>
+    <nav class="navbar">
+      <div class="logo">Lux Aureum</div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Ordinem Lux Aureum</h1>
+      <p>Uniting visionaries to shape culture.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="cta">Join Us</a>
+        <button id="wallet-btn" class="wallet-btn">Connect Wallet</button>
+      </div>
+    </div>
   </header>
-  <section class="about">
+
+  <section id="about" class="about">
     <h2>Our Mission</h2>
     <p>Ordinem Lux Aureum connects elite leaders to forge cultural sovereignty and drive transformative impact.</p>
   </section>
+
   <section id="contact" class="contact">
     <h2>Join Us</h2>
-    <form id="inquiry-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Your Vision" required></textarea>
+    <form id="inquiry-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Vision" required></textarea>
+        <span class="error-message"></span>
+      </div>
       <button type="submit">Submit</button>
     </form>
     <p>Or DM us: <a href="https://twitter.com/DollywoodDole">@DollywoodDole</a></p>
   </section>
-  <script src="index.js"></script>
+
+  <div id="toast" class="toast"></div>
+  <div id="wallet-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h3>Wallet Connection</h3>
+      <p id="wallet-status">Click below to connect your wallet.</p>
+      <button id="confirm-wallet">Connect</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
