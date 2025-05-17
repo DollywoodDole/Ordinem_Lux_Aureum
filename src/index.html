@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ordinem Lux Aureum connects elite leaders to shape culture.">
+  <meta name="keywords" content="Lux Arum, Web3, culture, leadership">
+  <title>Ordinem Lux Aureum</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo" aria-label="Ordinem Lux Aureum logo">Lux Aureum</div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Ordinem Lux Aureum</h1>
+      <p>Uniting visionaries to shape culture.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="cta" aria-label="Join our community">Join Us</a>
+        <button id="wallet-btn" class="wallet-btn" aria-label="Connect Web3 wallet">Connect Wallet</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>Our Mission</h2>
+    <p>Ordinem Lux Aureum connects elite leaders to forge cultural sovereignty and drive transformative impact.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Join Us</h2>
+    <form id="inquiry-form" aria-label="Contact form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Name" required aria-describedby="name-error">
+        <span id="name-error" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required aria-describedby="email-error">
+        <span id="email-error" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Vision" required aria-describedby="message-error"></textarea>
+        <span id="message-error" class="error-message"></span>
+      </div>
+      <button type="submit" aria-label="Submit form">Submit</button>
+    </form>
+    <p>Or DM us: <a href="https://twitter.com/DollywoodDole" aria-label="Contact us on Twitter">@DollywoodDole</a></p>
+  </section>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+  <div id="wallet-modal" class="modal" role="dialog" aria-labelledby="wallet-title">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close" aria-label="Close modal">×</span>
+      <h3 id="wallet-title">Wallet Connection</h3>
+      <p id="wallet-status">Click below to connect your wallet.</p>
+      <button id="confirm-wallet" aria-label="Confirm wallet connection">Connect</button>
+    </div>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
