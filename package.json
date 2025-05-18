@@ -17,7 +17,7 @@
   "author": "Dalton Ellscheid",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "jss": "^10.10.0",
     "jss-preset-default": "^10.10.0"
   },
