@@ -9,13 +9,19 @@
     "build": "node src/build.js",
     "deploy": "gh-pages -d public"
   },
-  "keywords": ["website", "recruitment", "ordinem-lux-aureum"],
+  "keywords": [
+    "website",
+    "recruitment",
+    "ordinem-lux-aureum"
+  ],
   "author": "Dalton Ellscheid",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "gh-pages": "^6.1.1",
     "jss": "^10.10.0",
     "jss-preset-default": "^10.10.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
