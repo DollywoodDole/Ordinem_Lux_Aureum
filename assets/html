@@ -43,7 +43,7 @@
       </div>
       <div class="form-group">
         <input type="email" id="email" name="email" placeholder="Email" required aria-describedby="email-error">
-        <span id="email-error" class="error-message"></span>
+        <span id="name-error" class="error-message"></span>
       </div>
       <div class="form-group">
         <textarea id="message" name="message" placeholder="Your Vision" required aria-describedby="message-error"></textarea>
